@@ -1,0 +1,22 @@
+<html>
+<head>
+  <%- include("includes/head", { title: "Home" }) %>
+</head>
+<body style="background-image: url('images/background.png'); background-repeat: no-repeat; background-size: 125%; background-color: #55a02d">
+  <%- include("includes/header", { req }) %>
+  <br>
+  <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
+  <h1>Yoshiboi18303</h1>
+  <h3 class="description">A developer and gamer from the United States!</h3>
+  <br>
+  <div class="buttons">
+    <button class="btn" onclick="location.href='https://mushroom.gg/yoshiboi18303'"><img src="/static/img/mushroom.png" alt="Mushroom Icon" class="mr-icon"><h5>Mushroom</h5></button>
+    <button class="btn" onclick="location.href='https://discord.com/users/697414293712273408'"><img src="/static/img/discord.png" alt="Discord Icon" class="dc-icon"><h5>Discord</h5></button>
+    <button class="btn" onclick="location.href='https://twitch.tv/yoshiboi18303'"><img src="/static/img/twitch.png" alt="Twitch Icon" class="ttv-icon"><h5>Twitch</h5></button>
+    <button class="btn" onclick="location.href='https://twitter.com/Yoshi_Brid'"><img src="/static/img/twitter.png" alt="Twitter Icon" class="twitr-icon"><h5>Twitter</h5></button>
+    <br>
+    <button class="btn" onclick="location.href='/about'"><h5>About Me</h5></button>
+    <button class="btn" onclick="location.href='/bots'"><h5>Developed Bots</h5></button>
+  </div>
+</body>
+</html>

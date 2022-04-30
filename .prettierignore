@@ -1,0 +1,8 @@
+.gitignore
+.config/
+.cache/
+.upm/
+.replit
+replit.nix
+package.json
+package-lock.json
