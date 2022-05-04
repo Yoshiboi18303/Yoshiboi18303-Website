@@ -52,7 +52,7 @@ passport.use(
       clientID: "968755285961371668",
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL: "/login/callback",
-      scope: ["identify", "email"],
+      scope: ["identify", "email", "guilds"],
     },
     (access, refresh, profile, done) => {
       process.nextTick(() => {

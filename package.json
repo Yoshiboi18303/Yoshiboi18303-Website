@@ -2,6 +2,7 @@
   "name": "yoshiboi-website-recoded",
   "version": "1.0.0",
   "description": "A recoded version of my website!",
+  "main": "./run.js",
   "devDependencies": {
     "node": "^16.6.1",
     "prettier": "2.6.2"
