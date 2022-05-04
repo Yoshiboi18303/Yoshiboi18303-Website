@@ -84,6 +84,12 @@ app.get("/bots", async (req, res) => {
   });
 });
 
+app.get(["/audio", "/music"], (req, res) => {
+  res.status(200).render("music", {
+    req
+  })
+})
+
 app.listen(port);
 console.log(
   `The website for ${"Yoshiboi18303".green} is now listening on port ${

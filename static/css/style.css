@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Knewave&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 
 * {
   margin: 0;
@@ -184,4 +184,18 @@ button.submit {
   background-color: #4caf50;
   border: 2px solid #4caf50;
   cursor: pointer;
+}
+
+.audio-view {
+  text-align: center;
+}
+
+h2.song-name {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: bold;
+}
+
+img.cover {
+  width: 156px;
+  height: 156px;
 }
