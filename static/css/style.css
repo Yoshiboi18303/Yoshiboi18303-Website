@@ -109,6 +109,16 @@ span {
   width: 30px;
 }
 
+.sc-logo {
+  height: 60px;
+  width: 75px;
+}
+
+.spotify-logo {
+  height: 60px;
+  width: 60px;
+}
+
 p.about,
 a.server-link,
 a.back-to-home {
