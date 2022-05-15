@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <%- include("includes/head", { title: "Friends" }) %>
+  </head>
+  <body style="background-color: #55a02d;">
+    <%- include("includes/header", { req }) %>
+    <br>
+    <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
+    <h1>Friends</h1>
+    <h3 class="description">Here are all of Yoshiboi18303's friends!</h3>
+    <br>
+    <div class="friends-view">
+      <div class="friend">
+        <img src="/static/img/avatars/commander.png" alt="Commander R's Avatar" class="avatar">
+        <h2 class="friend-name">Commander R</h2>
+      </div>
+    </div>
+    <br>
+    <%- include("includes/footer") %>
+  </body>
+</html>

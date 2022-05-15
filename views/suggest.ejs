@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <%- include("includes/head", { title: "Suggest" }) %>
+  </head>
+  <body style="background-color: #55a02d;">
+    <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
+    <br>
+    <% if(!req.isAuthenticated()) { %>
+      <div class="login-alert">
+        <h1>Not Authenticated!</h1>
+        <br>
+        <p>You must be logged in to view this page!</p>
+        <br>
+        <button class="btn" onclick="location.href='/login'">Login</button>
+      </div>
+    <% } else { %>
+      <h1>Suggest A Feature!</h1>
+      <h3 class="description">Suggest a feature for one of Yoshiboi18303's Bots!</h3>
+      <br>
+      <form id="suggestions">
+        <label for="bot">Bot:</label>
+        <select title="Bot Selection" class="bot-dropdown" id="bot" required>
+          <option value="modman">Moderation Man</option>
+          <option value="musicman">Musical Man</option>
+        </select>
+        <br>
+        <label for="suggestion">Suggestion:</label>
+        <input type="text" required placeholder="Please add this and that..." class="suggestion-input" id="suggestion">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class="submit">
+      </form>
+      <h3 class="info">
+        <small>
+          By submitting a suggestion, you agree that you have read and accepted the <a href="/suggestionrules" target="_blank" rel="noreferrer" class="rules-link">Suggestion Rules</a>.
+        </small>
+      </h3>
+    <% } %>
+    <br>
+    <%- include("includes/footer") %>
+  </body>
+  <script>
+    var form = $("#suggestions")
+    
+    form.submit((e) => {
+      var bot = $("#bot").val()
+      var sugg = $("#suggestion").val()
+      
+      e.preventDefault()
+      fetch(`https://yoshiboi18303.tk/sendsuggestion`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          bot,
+          suggestion: sugg
+        }) 
+      })
+      location.href = "/suggestionsent?referral=https://yoshiboi18303.tk/sendsuggestion"
+    })
+  </script>
+</html>

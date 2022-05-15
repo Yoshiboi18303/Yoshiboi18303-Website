@@ -2,7 +2,7 @@
 <head>
   <%- include("includes/head", { title: "Bots" }) %>
 </head>
-<body style="background-image: url('images/background.png'); background-repeat: no-repeat; background-size: 125%; background-color: #55a02d">
+<body style="background-color: #55a02d;">
   <%- include("includes/header", { req }) %>
   <br>
   <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
@@ -23,7 +23,23 @@
         <button class="bot-button" onclick="location.href='https://moderation-man.ml'">Website</button>
       </div>
     </div>
+    <br>
+    <br>
+    <div class="bot">
+      <a href="https://cdn.yoshiboi18303.tk/Musical_Man.png" target="_blank" rel="noreferrer">
+        <img src="/static/img/musicman.png" alt="Musical Man Avatar" class="bot-avatar" type="image/png">
+      </a>
+      <br>
+      <h2 class="bot-title">Musical Man</h2>
+      <h3 class="description">A music bot designed to sound great!</h3>
+      <br>
+      <div class="bot-buttons">
+        <button class="bot-button" onclick="location.href='https://bit.ly/3wevSpF'">Invite</button>
+      </div>
+    </div>
   </div>
+  <br>
+  <%- include("includes/footer") %>
   <script src="script.js"></script>
 </body>
 </html>
