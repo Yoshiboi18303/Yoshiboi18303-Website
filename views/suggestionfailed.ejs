@@ -1,0 +1,13 @@
+<html lang="en-US">
+  <head>
+    <%- include("includes/head", { title: "Suggestion Failed" }) %>
+  </head>
+  <body style="background-color: #55a02d;">
+    <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
+    <br>
+    <h1 class="red">Suggestion Failed...</h1>
+    <h3 class="description red">Your suggestion failed to send with the status code: <%= req.status %></h3>
+    <br>
+    <%- include("includes/footer") %>
+  </body>
+</html>

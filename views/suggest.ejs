@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <%- include("includes/head", { title: "Suggest" }) %>
+    <%- include("includes/head", { title: "Suggest Feature" }) %>
   </head>
   <body style="background-color: #55a02d;">
     <img src="/static/img/icon.png" alt="Yoshiboi18303's Avatar" class="avatar">
@@ -23,6 +23,9 @@
         <select title="Bot Selection" class="bot-dropdown" id="bot" required>
           <option value="modman">Moderation Man</option>
           <option value="musicman">Musical Man</option>
+          <option value="ultron">Ultron</option>
+          <option value="thor">Thor</option>
+          <option value="rockconomy">Rocket-Conomy</option>
         </select>
         <br>
         <label for="suggestion">Suggestion:</label>
@@ -48,9 +51,9 @@
       var sugg = $("#suggestion").val()
       
       e.preventDefault()
-      fetch(`https://yoshiboi18303.tk/sendsuggestion`, {
+      fetch(`https://Yoshiboi18303-Website-Recoded.yoshiboi18303.repl.co/sendsuggestion`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Authorization: env.REQUEST_SECRET },
         body: JSON.stringify({
           bot,
           suggestion: sugg
